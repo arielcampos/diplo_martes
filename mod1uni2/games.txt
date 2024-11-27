@@ -1,0 +1,5 @@
+-steam
+-uplay
+-ea
+-hydra
+
