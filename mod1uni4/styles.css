@@ -13,9 +13,12 @@ h2 {
 h3 {
     background-color: burlywood;
     border : 1px;
+    width: 400px;
+
 }
 
 li {
     font-size : 20px;
+    background-color: antiquewhite;
     
 }
