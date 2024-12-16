@@ -1,0 +1,46 @@
+
+
+h1 {
+    color: blue;
+    font-family: arial;
+ }
+
+h2 {
+    color: red;
+    font-family: Verdana;
+}
+
+h3 {
+    background-color: burlywood;
+    border : 1px;
+    width: 400px;
+
+}
+
+ul {
+    font-size : 20px;
+    background-color: antiquewhite;
+    
+}
+
+li {
+    font-size : 20px;
+    background-color: antiquewhite;
+    
+}
+
+.gradiente {
+    background: linear-gradient(to left, blue , white);
+    
+}
+
+.gradiente2 {
+    background: linear-gradient(to left, red , white);
+   
+}
+
+.sombra {
+    box-shadow: 0 0 5px #888;
+    border-radius: 10px;
+}
+
