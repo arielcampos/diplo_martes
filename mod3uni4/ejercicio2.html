@@ -12,7 +12,7 @@
 
     <script>
         const textarea = document.getElementById('textarea');
-        const total = document.getElementById('total');
+        var total = document.getElementById('total');
 
         textarea.addEventListener('input',function(){
             total.innerText = textarea.value.length;
