@@ -6,23 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios JS </title>
     <style>
+
+        #container {
+            display: flex;
+            flex-direction: row;
+        }
         #cuadrado1 {
             width: 100px;
             height: 100px;
-            background-color: aqua;
+            background-color: red;
         }
 
         #cuadrado2 {
             width: 100px;
             height: 100px;
-            background-color: aquamarine;
+            background-color: green;
 
         }
 
         #cuadrado3 {
             width: 100px;
             height: 100px;
-            background-color: chartreuse;
+            background-color: yellow;
 
         }
     </style>
@@ -32,34 +37,37 @@
 
 <body>
 
-    <div id="cuadrado1">
+    <div id="container">
+        <div id="cuadrado1">
+        </div>
+        <div id="cuadrado2">
+        </div>
+        <div id="cuadrado3">
+        </div>
+
+        <script>
+            const cuadrado1 = document.getElementById('cuadrado1');
+
+            cuadrado1.addEventListener('click', function () {
+
+                document.body.style.backgroundColor = 'red';
+            });
+
+            const cuadrado2 = document.getElementById('cuadrado2');
+
+            cuadrado2.addEventListener('click', function () {
+
+                document.body.style.backgroundColor = 'green';
+            });
+            const cuadrado3 = document.getElementById('cuadrado3');
+
+            cuadrado3.addEventListener('click', function () {
+
+                document.body.style.backgroundColor = 'yellow';
+            });
+        </script>
+
     </div>
-    <div id="cuadrado2">
-    </div>
-    <div id="cuadrado3">
-    </div>
-
-    <script>
-        const cuadrado1 = document.getElementById('cuadrado1');
-
-        cuadrado1.addEventListener('click', function () {
-
-            cuadrado1.style.backgroundColor = 'red';
-        });
-
-        const cuadrado2 = document.getElementById('cuadrado2');
-
-        cuadrado2.addEventListener('click', function () {
-
-            cuadrado2.style.backgroundColor = 'green';
-        });
-        const cuadrado3 = document.getElementById('cuadrado3');
-
-        cuadrado3.addEventListener('click', function () {
-
-            cuadrado3.style.backgroundColor = 'yellow';
-        });
-    </script>
 </body>
 
 </html>
