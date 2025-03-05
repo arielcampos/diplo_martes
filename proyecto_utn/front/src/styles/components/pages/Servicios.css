@@ -1,0 +1,100 @@
+/*--Seccion de servicios -----------------------------------------*/
+
+#servicios {
+    padding-top: 2em;
+}
+
+.servicios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    padding: 60px;
+}
+
+.servicios-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 250px;
+}
+
+/* Hover  */
+.servicios-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.servicios-titulo h2 {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    color: #025add;
+    margin-bottom: 0.5rem;
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.servicios-subtitulo p {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #b8651d;
+    margin-bottom: 0.5rem;
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+/*-------------------------------------------*/
+/* Seccion de servicios 
+------------------------------------------*/
+
+
+/* Definir la animación */
+@keyframes slideUp {
+    0% {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Icono */
+.servicios-card .icon {
+    font-size: 60px;
+    color: #025add;
+    margin-bottom: 15px;
+    animation: slideUp 0.6s ease-out forwards;
+    /* Aplicamos la animación */
+}
+
+/* Titulo */
+.servicios-card h3 {
+    font-size: 20px;
+    color: #025add;
+    margin: 0 0 10px;
+    font-family: 'Poppins', sans-serif;
+    animation: slideUp 0.6s ease-out 0.2s forwards;
+    /* Aplicamos la animación con un retraso */
+}
+
+/* Texto */
+.servicios-card p {
+    font-size: 14px;
+    color: #3a3a3a;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    animation: slideUp 0.6s ease-out 0.4s forwards;
+    /* Aplicamos la animación con un retraso */
+}

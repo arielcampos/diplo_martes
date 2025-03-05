@@ -1,0 +1,54 @@
+.precios-holder {
+    margin-top: 8em;
+}
+
+
+.precios-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color:#025add; 
+}
+
+.precios-subtitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+
+.precios-holder h3{  
+    color:#b8651d;
+}
+
+.precios-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2em;
+    gap : 20px;
+    
+}
+
+.precios-card {
+    padding : 40px 20px;
+    box-shadow:  1px 5px 20px 0px whitesmoke;
+    text-align: center;
+    width: 25%;
+    border: #ccc solid 1px;
+   
+}
+
+.plan {
+    font-size: 1.7em;
+}
+
+.precios-card:hover {
+    transform: scale(1.2);
+    background-color: white;
+    transition: transform 0.5s ease;
+}

@@ -1,3 +1,6 @@
+import '../styles/components/pages/Precios.css'
+
+
 const Precios = (props) => {
     return (
         <main className="precios-holder">

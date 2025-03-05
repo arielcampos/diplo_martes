@@ -1,3 +1,8 @@
+
+import '../styles/components/pages/Contacto.css'
+
+
+
 const Contacto = (props) => {
     return (
         <div id="servicios">

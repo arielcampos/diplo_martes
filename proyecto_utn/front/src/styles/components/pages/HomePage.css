@@ -1,0 +1,222 @@
+
+@keyframes desplazarArriba {
+    0% {
+        bottom: 45%;
+    }
+
+    100% {
+        bottom: 65%;
+    }
+}
+
+@keyframes desplazarArriba2 {
+    0% {
+        bottom: 35%;
+    }
+
+    100% {
+        bottom: 60%;
+    }
+}
+
+@keyframes desplazarArriba3 {
+    0% {
+        bottom: 25%;
+    }
+
+    100% {
+        bottom: 55%;
+    }
+}
+
+@keyframes desplazarArriba4 {
+    0% {
+        bottom: 15%;
+    }
+
+    100% {
+        bottom: 40%;
+    }
+}
+
+/*-------------------------------------------*/
+/*--Imagen Principal -*/
+/* ----------------------------------------*/
+.imagen-container {
+    width: 100%;
+    min-width: 800px;
+}
+
+
+.imagen-container img {
+    width: 100%;
+    height: auto;
+    min-width: 800px;
+}
+
+
+.titulo-imagen {
+    position: absolute;
+    left: 50%;
+    color: white;
+    font-size: 2.7rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    animation: desplazarArriba 1s linear forwards;
+}
+
+.subtitulo-imagen {
+    position: absolute;
+    left: 50%;
+    color: #025add;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    animation: desplazarArriba2 1s linear forwards;
+}
+
+.texto-imagen {
+    position: absolute;
+    left: 50%;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    animation: desplazarArriba3 1s linear forwards;
+}
+
+.texto-imagen2 {
+    position: absolute;
+    left: 50%;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    animation: desplazarArriba4 1s linear forwards;
+}
+
+/*------------------------------------------------------*/
+
+.descripcion-container {
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.descripcion {
+    width: 100%;
+    height: 50px;
+    padding: 2em;
+    background-color: #025add;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.descripcion2 {
+    width: 100%;
+    height: 150px;
+    padding: 2em;
+    background-color: whitesmoke;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #025add;
+}
+
+#servicios {
+    padding-top: 2em;
+}
+
+.servicios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    padding: 60px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 250px;
+}
+
+
+.servicios-titulo h2 {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    color: #025add;
+    margin-bottom: 0.5rem;
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.servicios-subtitulo p {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #b8651d;
+    margin-bottom: 0.5rem;
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+/*-------------------------------------------*/
+/* Seccion de servicios 
+------------------------------------------*/
+
+
+/* Definir la animación */
+@keyframes slideUp {
+    0% {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Icono */
+.servicios-card .icon {
+    font-size: 60px;
+    color: #025add;
+    margin-bottom: 15px;
+    animation: slideUp 0.6s ease-out forwards;
+    /* Aplicamos la animación */
+}
+
+/* Titulo */
+.servicios-card h3 {
+    font-size: 20px;
+    color: #025add;
+    margin: 0 0 10px;
+    font-family: 'Poppins', sans-serif;
+    animation: slideUp 0.6s ease-out 0.2s forwards;
+    /* Aplicamos la animación con un retraso */
+}
+
+/* Texto */
+.card p {
+    font-size: 14px;
+    color: #3a3a3a;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    animation: slideUp 0.6s ease-out 0.4s forwards;
+    /* Aplicamos la animación con un retraso */
+}
