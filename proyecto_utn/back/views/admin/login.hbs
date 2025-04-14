@@ -1,1 +1,27 @@
-<h1> Proximamente Armamos el Login </h1>
+
+
+<div style="padding: 80px;">
+<form action="/admin/login" method="post">
+  <!-- Email input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="text" id="inputUser" class="form-control" placeholder="usuario" name="usuario"/>
+    <label class="form-label" for="form2Example1">Usuario</label>
+  </div>
+
+  <!-- Password input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="text" id="inputPassword" class="form-control" placeholder="contraseña" name="password"/>
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+
+ 
+  <!-- Submit button -->
+  <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
+
+  
+</form>
+{{#if error}}
+<p>Usuario y/o cotraseña incorrectos</p>
+{{/if}}
+
+</div>
