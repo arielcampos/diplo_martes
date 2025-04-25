@@ -56,7 +56,7 @@ router.post('/agregar', async (req,res,next) => {
         img_id = (await uploader(imagen.tempFilePath)).public_id;
       }
 
-    if (req.body.titulo != "" && req.body.subtitulo != "") {
+    if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo!= "") {
       await novedadesModel.insertNovedad({
         ...req.body,
         img_id
@@ -100,12 +100,14 @@ router.get('/modificar/:id', async (req,res,next) => {
 
 router.post ('/modificar', async (req,res,next) => {
   try {
+    
     var obj = {
       titulo: req.body.titulo,
-      subtitulo: req.body.subtitulo
+      subtitulo: req.body.subtitulo,
+      cuerpo: req.body.cuerpo 
     }
     console.log(obj);
-    await novedadesModel.modificarNovedadById(obj,req.body.id);
+    await novedadesModel.modificarNovedadById(obj, req.body.id);
     res.redirect('/admin/novedades');
   } catch (error) {
     console.log(error);
