@@ -1,46 +1,36 @@
 import '../styles/components/pages/Testimonios.css'
 
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import NovedadItem from '../components/layout/novedades/NovedadItem';
+
 const Testimonios = (props) => {
+
+    const [loading, setLoading] = useState(false);
+    const [novedades, setNovedades] = useState([]);
+
+    useEffect(() => {
+        const cargarNovedades = async () => {
+            setLoading(true);
+            const response = await axios.get('http://localhost:3000/api/novedades');
+            setNovedades(response.data);
+            setLoading(false);
+        };
+
+        cargarNovedades();
+    }, []);
+
     return (
-        <>
-            <div className="testimonios">
-                <h2>Testimionios</h2>
-                <div className="novedades">
-                    <h3>Cliente</h3>
-                    <h4>Subtitulo</h4>
-                    <p> Comentario - Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quas eos perspiciatis
-                        velit cum cupiditate tempore assumenda soluta ut doloribus molestias magnam expedita, quidem quam
-                        maiores a dignissimos! Tenetur, facilis?</p>
-
-
-                </div><div className="novedades">
-                    <h3>Cliente</h3>
-                    <h4>Subtitulo</h4>
-                    <p> Comentario - Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quas eos perspiciatis
-                        velit cum cupiditate tempore assumenda soluta ut doloribus molestias magnam expedita, quidem quam
-                        maiores a dignissimos! Tenetur, facilis?</p>
-
-
-                </div><div className="novedades">
-                    <h3>Cliente</h3>
-                    <h4>Subtitulo</h4>
-                    <p> Comentario - Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quas eos perspiciatis
-                        velit cum cupiditate tempore assumenda soluta ut doloribus molestias magnam expedita, quidem quam
-                        maiores a dignissimos! Tenetur, facilis?</p>
-
-
-                </div><div className="novedades">
-                    <h3>Cliente</h3>
-                    <h4>Subtitulo</h4>
-                    <p> Comentario - Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quas eos perspiciatis
-                        velit cum cupiditate tempore assumenda soluta ut doloribus molestias magnam expedita, quidem quam
-                        maiores a dignissimos! Tenetur, facilis?</p>
-
-
-                </div>
-            </div>
-
-        </>
+        <section className="holder">
+            <h2>Testimonios</h2>
+            {loading ? (
+                <p>Cargando...</p>
+            ) : (
+                novedades.map(item => <NovedadItem key={item.id}
+                    title={item.titulo} subtitle={item.subtitulo}
+                    imagen={item.imagen} body={item.cuerpo} />)
+            )}
+        </section>
     );
 }
 
