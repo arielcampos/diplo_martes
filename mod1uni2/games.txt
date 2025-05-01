@@ -1,5 +1,0 @@
--steam
--uplay
--ea
--hydra
-
