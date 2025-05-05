@@ -91,7 +91,7 @@ import axios from 'axios';
                             </div>
                         </form>
                         {sending ? <p>Enviando...</p> : null }
-                        {msg ? <p>msg </p> : null }
+                        {msg ? <p>Mensaje Enviado! </p> : null }
 
                     </div>
             </div>
